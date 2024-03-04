@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a href="{{ path('app_home') }}" class="navbar-brand">To Do Symfony 🗒️</a>
+        <a href="{{ path('app_home') }}" class="navbar-brand">Daily Planner 🗒️</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('app_about') }}">About</a></li>
             </ul>
             {% if app.user %}
                 <a class='navbar-brand'>Hello, {{ app.user.username }}!</a>

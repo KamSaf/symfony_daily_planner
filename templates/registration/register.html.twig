@@ -22,6 +22,12 @@
                                     {{ form_errors(registrationForm.email) }}
                                     {{ form_rest(registrationForm.email) }}
                                 </div>
+                                <div style="margin-top: 10px;" id="username-field">
+                                    {{ form_label(registrationForm.username) }} <br>
+                                    {{ form_widget(registrationForm.username) }}
+                                    {{ form_errors(registrationForm.username) }}
+                                    {{ form_rest(registrationForm.username) }}
+                                </div>
                                 <div style="margin-top: 10px;" id="password-field">
                                     {{ form_label(registrationForm.plainPassword.first) }}<br>
                                     {{ form_widget(registrationForm.plainPassword.first) }}
@@ -37,7 +43,7 @@
                                 <div style="margin-top: 10px;" id="agree-terms-field">
                                     {{ form_widget(registrationForm.agreeTerms) }}
                                     {{ form_label(registrationForm.agreeTerms) }}<br>
-                                    <p style="margin-top: 5px;" class="text-center text-muted"> Have fun and enjoy the CarHub!</p>
+                                    <p style="margin-top: 5px;" class="text-center text-muted"> Have fun!</p>
                                     {{ form_errors(registrationForm.agreeTerms) }}
                                     {{ form_rest(registrationForm.agreeTerms) }}
                                 </div>
@@ -45,7 +51,7 @@
                                     <button style="margin-top: 25px;" class="btn btn-sm btn-success" type="submit">Register</button>
                                 </div>
                             {{ form_end(registrationForm) }}
-                            <small style="margin-top: 15px;" class="text-muted">Already have an account? <a class="ml-2" href="{{ path('app_login) }}">Sign in</a></small>
+                            <small style="margin-top: 15px;" class="text-muted">Already have an account? <a class="ml-2" href="{{ path('app_login') }}">Sign in</a></small>
                         </div>
                     </div>
                 </div>

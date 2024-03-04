@@ -29,7 +29,7 @@ class RegistrationFormType extends AbstractType
                     'aria-describedby' => 'emailHelp',
                 ]
             ])
-            ->add('name', TextType::class, [
+            ->add('username', TextType::class, [
                 'label' => 'Username:',
                 'attr' => [
                     'class' => 'form-control',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Daily Planner{% endblock %}</title>
@@ -17,10 +17,7 @@
     <header>
         {% include 'html/navbar.html' %}
     </header>
-    <body style="background-color: #eaf0f5;">
+    <body style="background-color: #42474f;">
         {% block body %}{% endblock %}
     </body>
-    <footer>
-        {% include 'html/footer.html' %}    
-    </footer>
 </html>

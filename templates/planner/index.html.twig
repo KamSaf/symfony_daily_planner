@@ -2,10 +2,24 @@
 
 
 {% block body %}
+
+<style>
+.form-check-input:checked{
+   background-color: orange !important;
+   border: 0;
+}
+.form-check-input:focus, form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+   color: black;
+   outline: 0;
+   border: 0;
+   box-shadow: 0 0 0 0.1rem orange !important;
+}
+</style>
+
 <div style="margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px;">
     <div style="display: flex;">
         <div class="row h-100 w-100">
-            <div class="col-3 overflow-auto" style="background-color: #202124; height: 760px;">
+            <div class="col-3 overflow-auto" style="background-color: #202124; height: 780px;">
                 <div class="d-grid gap-2" style="margin-bottom: 10px;"><button class="btn btn-outline-warning">hello</button></div>
                 <div class="d-grid gap-2" style="margin-bottom: 10px;"><button class="btn btn-outline-warning">hello</button></div>
                 <div class="d-grid gap-2" style="margin-bottom: 10px;"><button class="btn btn-outline-warning">hello</button></div>
@@ -37,12 +51,73 @@
                 <div class="d-grid gap-2" style="margin-bottom: 10px;"><button class="btn btn-outline-warning">hello</button></div>
                 <div class="d-grid gap-2" style="margin-bottom: 10px;"><button class="btn btn-outline-warning">hello</button></div>
             </div>
-            <div class="col-9" style="background-color: #202124; height: 760px;">
-                <div class="row h-75 overflow-auto">
-                    hello
-                </div>
-                <div class="row h-25">
-                    <textarea name="" id="" cols="30" rows="7"></textarea>
+            <div class="col-9" style="background-color: #202124; height: 780px;">
+                <div class="row h-75">
+                    <div class="row h-25">
+                        <h3 style="margin-top: 15px; margin-left: 10px;">
+                            21.03.2024
+                            <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                            <button class="btn btn-sm btn-warning float-end" style="margin-right: 15px;">Save</button>
+                            <hr>
+                            Day plan:
+                        </h3>
+                    </div>
+                    <div class="row h-50 overflow-auto" style="margin-top: 10px;">
+                        <ul style="list-style: none; margin-left: 15px;">
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                            <li style="margin-bottom: 20px; margin-left: 50px;">
+                                <input class="form-check-input" type="checkbox">
+                                go coding son
+                                <button class="btn btn-sm btn-outline-danger float-end"><i class="bi bi-trash"></i></button>
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row h-50 overflow-auto" style="margin-top: 15px;">
+                        <h3>Notes:</h3>
+                        <textarea name="" id="" cols="30" rows="9"></textarea>
+                    </div>
                 </div>
             </div>
         </div>

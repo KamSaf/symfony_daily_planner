@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UsersRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -38,6 +40,14 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 100)]
     private ?string $username = null;
+
+    #[ORM\OneToMany(targetEntity: DailyPlans::class, mappedBy: 'user', orphanRemoval: true)]
+    private Collection $dailyPlans;
+
+    public function __construct()
+    {
+        $this->dailyPlans = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -134,6 +144,36 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUsername(string $username): static
     {
         $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, DailyPlans>
+     */
+    public function getDailyPlans(): Collection
+    {
+        return $this->dailyPlans;
+    }
+
+    public function addDailyPlan(DailyPlans $dailyPlan): static
+    {
+        if (!$this->dailyPlans->contains($dailyPlan)) {
+            $this->dailyPlans->add($dailyPlan);
+            $dailyPlan->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDailyPlan(DailyPlans $dailyPlan): static
+    {
+        if ($this->dailyPlans->removeElement($dailyPlan)) {
+            // set the owning side to null (unless already changed)
+            if ($dailyPlan->getUser() === $this) {
+                $dailyPlan->setUser(null);
+            }
+        }
 
         return $this;
     }
